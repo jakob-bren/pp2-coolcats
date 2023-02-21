@@ -12,17 +12,18 @@
 		<div id="quizmain">
 			<h3 id="question"></h3>
 			<div class="answers">
-				<ul>
-					<li class="answer"></li>
-					<li class="answer"></li>
-					<li class="answer"></li>
-					<li class="answer"></li>
-				</ul>
+				<div id="answerList">
+					<button class="answerFields" data-type="a" ></button>
+					<button class="answerFields" data-type="b"></button>
+					<button class="answerFields" data-type="c"></button>
+					<button class="answerFields" data-type="d"></button>
+				</div>
 			</div>
+				<button id="submit">Submit</button>
 			<button id="next">Next Question</button>
 		</div>
 	</section>
-    <script src="assets/js/cats.js"></script>
+    <script src="assets/js/cats.js" defer></script>
 </body>
 </html>
 
@@ -42,3 +43,6 @@ result = if shorthair=7 && cuteness=10 && patterns=neutral && landlord=yes && ad
 (munchkin type: shorthair=yes patterns=neutral wild=yes independent=yes) 
 results text: you should get a '$colour' '$breed'! '$breed' cats are '$cuteness' and '$independent' creatures. they are '$breedsize' and '$hideability'. your particular '$breed' will be a'$pattern' with '$texture/$hairyness'. your cat will 'come from a shelter/come from a petshop/show up in your back garden and adopt you/be your personal little rescue'. your new cat is '$wild'.
 e.g: you should get a cream and white munchkin! munchkin cats are sweet and self-reliant creatures. they are small and easy to hide. your particular munchkin will be a two-tone cat with short hair. your cat will show up in your back garden and adopt you. your new cat is an escaped housecat.    -->
+
+
+<!-- maybe the above is too complex - build instead a general cat knowledge quiz with basic scoring first. -->
