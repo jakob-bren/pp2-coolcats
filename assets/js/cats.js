@@ -84,4 +84,22 @@ function verifyAnswer(e) {
    
 }
 
+if (quizProgress == 4) {
+   calcResults();
+}
+
+function calcResults() 
+{
+  var results = parseInt(score);
+  var rawValue = document.getElementById(rawvalue);
+  var percentage = document.getElementById(percent);
+  const calcScore = (results / 8) * 100;
+  rawValue.innerText = results;
+  percentage.innerText = calcScore;
+  if results <=3 {//your cat knowledge isn't very good}
+  if results <=6 {// you could do with brushing up on cats}
+  if results <=8 {//you're a proper cat genius}
+  // html correspond = <p>Congrats! You got <span id="rawvalue"></span> out of 8. In other words, you scored <span id=percent></span>. </p>
+}
+
 //to do: more questions, score calculation, results page, THEN general css, images, beautifying etc
