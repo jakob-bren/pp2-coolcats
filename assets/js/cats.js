@@ -84,6 +84,7 @@ function verifyAnswer(e) {
    
 }
 
+<<<<<<< HEAD
 if (quizProgress == 4) {
    calcResults();
 }
@@ -102,4 +103,6 @@ function calcResults()
   // html correspond = <p>Congrats! You got <span id="rawvalue"></span> out of 8. In other words, you scored <span id=percent></span>. </p>
 }
 
+=======
+>>>>>>> da4fe9cfdbc7a1a371364929df8d8dbf77376fe5
 //to do: more questions, score calculation, results page, THEN general css, images, beautifying etc
