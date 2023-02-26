@@ -18,26 +18,6 @@ const questions = [
       question: "What is your cat thinking about?", 
       answers: ["mischief", "food", "sleep", "birds"],
       answer: 0
-    },
-    { 
-      question: "Can your cat open doors?",
-      answers: ["Don't know", "I hope not", "How could he?", "Yes"],
-      answer: 3
-    },
-    {
-      question: "Does your cat love cheese?", 
-      answers: ["yes", "no", "no comment", "don't know"],
-      answer: 0
-    },
-    {
-      question: "How many toe beans does a cat have?",
-      answers: ["Five", "Six", "Twenty", "what's a toe bean?"],
-      answer: 2
-    },
-    {
-      question: "Did you know your cat is behind you?", 
-      answers: ["What now?", "No", "Yes", "*eerie silence*"],
-      answer: 1
     }
  ]; //add more questions here
 var qText = document.getElementById('question');
@@ -65,12 +45,7 @@ function showNext() {
       answersList[i].textContent = aQuestion.answers[i];
       answersList[i].setAttribute("data-type", (i));
    }
-   if (quizProgress == 8) {
-      calcResults();
-   }
-   else { 
-      listenAnswer(); 
-   }
+   listenAnswer();
 }
 
 
@@ -102,37 +77,29 @@ function verifyAnswer(e) {
    answersList.setAttribute = "";
    console.log("old question was:");
    console.log(quizProgress+1);
-
-   if (quizProgress === 7) {
-      calcResults();
-   }
-   else { 
-      ++quizProgress;
-      console.log("new question is:");
-      console.log(quizProgress+1);
-      showNext(quizProgress); }
- 
+   ++quizProgress;
+   console.log("new question is:");
+   console.log(quizProgress+1);
+   showNext(quizProgress)
    
 }
 
-//to do: more questions, score calculation, results page, THEN general css, images, beautifying etc
-
-
+if (quizProgress == 4) {
+   calcResults();
+}
 
 function calcResults() 
 {
-  var pass = "your cat knowledge isn't very good";
-  var distinction = "you could do with brushing up on cats";
-  var merit = "you're a proper cat genius";
-  var showResultText = document.getElementById('resultsText');
   var results = parseInt(score);
-  var rawValue = document.getElementById('rawvalue');
-  var percentage = document.getElementById('percent');
+  var rawValue = document.getElementById(rawvalue);
+  var percentage = document.getElementById(percent);
   const calcScore = (results / 8) * 100;
   rawValue.innerText = results;
   percentage.innerText = calcScore;
-  if (results <=3) {showResultText.innerText = pass; };
-  if (results <=6) {showResultText.innerText = distinction;};
-  if (results >=7) {showResultText.innerText = merit;};
+  if results <=3 {//your cat knowledge isn't very good}
+  if results <=6 {// you could do with brushing up on cats}
+  if results <=8 {//you're a proper cat genius}
   // html correspond = <p>Congrats! You got <span id="rawvalue"></span> out of 8. In other words, you scored <span id=percent></span>. </p>
 }
+
+//to do: more questions, score calculation, results page, THEN general css, images, beautifying etc
