@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/index.css">
 	<title>CCQuizzesLTD</title>
 </head>
-<body>
+<body onload="fromStorage()">
 	<section>
 		<h1>Cool Cat Quizzes</h1>
 		<div id="quizmain">
@@ -32,9 +32,36 @@
 		<div id="scoreValues">
 			<img id="resultsCat"><br>
 			<p>You scored: <span id="rawvalue"></span>/8. In percentage points this is <span id="percent"></span>%.</p>
-		<p>if i'm being honest, <span id="resultsText"></span>.</p></div>
+			<p>if i'm being honest, <span id="resultsText"></span>.</p>
+			<strong>Enter Username:</strong> <form><input type="text" id="user" name="username"></form> <button onclick="submitScore()">Submit</button>
+		</div>
 
 		<button id="next">Start Quiz</button>
+
+		<table id="highscores">
+			<tr>
+				<th>Username</th>
+				<th>Score</th>
+			</tr>
+			<tr>
+				<td>Dodger</td>
+				<td>8</td>
+				
+			</tr>
+			<tr>
+				<td>Raffo</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>Sarah</td>
+				<td>4</td>
+				
+			</tr>
+			<tr>
+				<td>l33th4x0r2k9</td>
+				<td>0</td>
+			</tr>
+		</table>
 		
 	</section>
     <script src="assets/js/cats.js" defer></script>

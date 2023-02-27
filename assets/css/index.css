@@ -7,6 +7,22 @@
     max-width: 50vh;
     max-height: 45vh;
 }
+
+table, td, tr, th {
+    align-self: center;
+    border: 1px solid black;
+}
+
+th {
+    width: 100%;
+}
+
+table {
+    max-width: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (min-width: 1280px) {
     @media (pointer:fine) {
         button {

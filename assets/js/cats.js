@@ -57,6 +57,17 @@ const questions = [
  ];
 
 
+function fromStorage() {
+   var savedUser = localStorage.usrName;
+   var savedScore = localStorage.scoreValue;
+      var table = document.getElementById('highscores');
+      let row = table.insertRow();
+      let td1 = row.insertCell(0);
+      let td2 = row.insertCell(1);
+      td1.innerText = savedUser;
+      td2.innerText = savedScore;
+}
+
 let qText = document.getElementById('question');
 let qImg = document.getElementById('qImage');
 let aNswer = document.getElementsByClassName('answer');
@@ -185,4 +196,22 @@ function calcResults()
    btn.innerText = "Start Quiz";
    btn.style.display = "none"; }
   // html correspond = <p>Congrats! You got <span id="rawvalue"></span> out of 8. In other words, you scored <span id=percent></span>. </p>
+}
+
+
+function submitScore() {
+   var usr = document.getElementById('user').value;
+   var rawValue = score;
+   var table = document.getElementById('highscores');
+   console.log(rawValue);
+   console.log (usr);
+   let row = table.insertRow();
+   let td1 = row.insertCell(0);
+   let td2 = row.insertCell(1);
+   td1.innerText =  usr;
+   td2.innerText = rawValue;
+   localStorage.usrName = usr;
+   localStorage.scoreValue = rawValue;
+   console.log(localStorage.usrName);
+   console.log(localStorage.scoreValue);
 }
