@@ -6,49 +6,50 @@
     <link rel="stylesheet" href="assets/css/index.css">
 	<title>CCQuizzesLTD</title>
 </head>
-<body>
+<body id="index">
 	<section>
+		<br><br>
 		<h1>Cool Cat Quizzes</h1>
 		<div id="quizmain">
 			<div id="qDiv">
 			<h3 id="question">Welcome to our Website</h3>
 			
 			</div>
-			<img id="qImage">
-			<div id="verifyDiv">
-				<button id="verify"></button>
+			<div class="squareImg">
+				<img src="assets/imgs/evie1.webp">
 			</div>
-			<div class="answers">
-				<div id="answerList">
-					<p>How well do you know cats? Are you brave enough to put your knowledge to the test?</p>
-					<p>Proceed if you dare!</p>
-				</div>
+			<div class="">
+				<p>How well do you know cats? Are you brave enough to put your knowledge to the test? </p>
+				<p> Proceed if you dare!</p>
+				<button onclick = "window.location.href='/quiz.html';">Start Quiz</button>
 			</div>
-			
-			<button onclick = "window.location.href='/quiz.html';">Start Quiz</button>
+			<table id="highscores">
+				<tr>
+					<th>Username</th>
+					<th>Score</th>
+				</tr>
+				<tr>
+					<td>Dodger</td>
+					<td>8</td>
+					
+				</tr>
+				<tr>
+					<td>Raffo</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>Sarah</td>
+					<td>4</td>
+					
+				</tr>
+				<tr>
+					<td>l33th4x0r2k9</td>
+					<td>0</td>
+				</tr>
+			</table>
 		</div>
 		
 	</section>
     <script src="assets/js/cats.js" defer></script>
 </body>
 </html>
-
-<!--What type of cat should I get?
-
-texture= hairless, shorthair, longhair // OR hairyness (0-10)
-cuteness= sliding scale, 1-10
-pattern= stripes, dots, patternless, neutral/no preference
-
-breed= mainecoon, munchkin, tuxedo, tabby, sphynx, siamese
-colour= bw, white, black, brown, silver, red, cream, coffee
-
-questions e.g "do you enjoy vacuuming" "would you have to hide your cat from your landlord" "which of the three patterns appeals to you most" 
-"which cat is most appealing to you/what does your house look like" "adopt or be adopted" "are cats commodities?" "do you like divas?"
-result = if shorthair=7 && cuteness=10 && patterns=neutral && landlord=yes && adoptee && not-commod >> 
-(munchkin attr: cuteness=10, landlord=yes)
-(munchkin type: shorthair=yes patterns=neutral wild=yes independent=yes) 
-results text: you should get a '$colour' '$breed'! '$breed' cats are '$cuteness' and '$independent' creatures. they are '$breedsize' and '$hideability'. your particular '$breed' will be a'$pattern' with '$texture/$hairyness'. your cat will 'come from a shelter/come from a petshop/show up in your back garden and adopt you/be your personal little rescue'. your new cat is '$wild'.
-e.g: you should get a cream and white munchkin! munchkin cats are sweet and self-reliant creatures. they are small and easy to hide. your particular munchkin will be a two-tone cat with short hair. your cat will show up in your back garden and adopt you. your new cat is an escaped housecat.    -->
-
-
-<!-- maybe the above is too complex - build instead a general cat knowledge quiz with basic scoring first. -->

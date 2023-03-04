@@ -1,35 +1,45 @@
 * {
     font-family: sans-serif;
     text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0;
 }
 
-#qImage, #resultsCat {
-    max-width: 50vh;
-    max-height: 45vh;
+#index {
+    height: 90vh;
 }
 
 table, td, tr, th {
+    border-collapse: collapse;
     align-self: center;
     border: 1px solid black;
+    padding: 0.25rem;
+    margin-bottom: 2rem;
 }
 
-th {
-    width: 100%;
-}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
-table {
-    max-width: 25vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (min-width: 1280px) {
+@media (min-width: 1280px) { /* desktop styling */
     @media (pointer:fine) {
+        body {
+            background-color: pink;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .squareImg > img { 
+            width: 47vh;
+        }
         button {
             font-size: 1.15rem;
             min-width: 5rem;
             height: 2.75rem;
-            width: 9rem;
+            width: 10rem;
             margin: 1rem;
             padding-left: 1rem;
             padding-right: 1rem;
@@ -49,18 +59,32 @@ table {
             transition: 500ms;
         }
 
+        section {
+            width: 70%;
+            height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(248, 226, 230);
+        }
+
+     
+
         #verify {
+            height: 3rem;
+            position: absolute;
             margin-bottom: 3.5rem;
-            margin-top: 0.5rem;
+            margin-top: 40rem;
             color: white;
+            width: 100%;
         }
 
         #verifyDiv, #qDiv {
-            height: 3rem;
+            align-items: center;
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: center;
         }
-
 
 
         #answerList {
@@ -76,13 +100,52 @@ table {
 
         }
 
+        #qImage, #resultsCat {
+            max-width: 50vh;
+            max-height: 45vh;
+        }
+        
+     
+        
+        th {
+            width: 100%;
+        }
+        
+        table {
+            max-width: 25vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     }
 }
 
 @media only screen and (max-width: 1080px) { /* for mobile screens */
     @media (pointer:coarse) {
         * {
-            font-size: 1.25rem;
+         font-size: 1.15rem;
+        }
+
+        table {
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        }
+
+        html {
+            box-sizing: border-box
+        }
+        .squareImg > img { 
+            width: 55%;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        #qImage, #resultsCat {
+            max-width: 42.5vh;
+            max-height: 42.5vh;
+    
         }
 
         #answerList {
@@ -96,27 +159,39 @@ table {
             max-height: 50vh;
 
         }
-        	#verifyDiv {
-                position:absolute;
-                z-index: 250;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                
-            }
+        #verifyDiv {
+            display: flex;
+            position:absolute;
+            z-index: 250;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 5rem;
+            
+        }
 
-            #verifyDiv > button {
-                align-self: center;
-                justify-self: center;
-                background-color: rgba(0, 128, 0, 0.359);
-                width: 100%;
-                height: 10vh;
-                margin-top: 0rem;
-                margin-bottom: 50rem;
-            }
-        
+        #verifyDiv > button {
+            align-self: center;
+            justify-self: center;
+            background-color: rgba(0, 121, 0, 0.826);
+            color: white;
+            border: 3px solid rgb(34, 240, 255);
+            text-align: center;
+            height: 10vh;
+            width: 90%;
+            margin-top: 0rem;
+            margin-bottom: 50rem;
+            
+        }
+    
         #answerList > button {
-            flex: 2 0 auto;
+            flex: 2 0 50%;
+            text-align: center;
+            border: 2px solid skyblue;
+            background-color: rgb(223, 242, 251);
+            color: rgb(83, 83, 83);
+            box-shadow: 5px 6px 2px -4px #3c3c3c;
+    
         
         }
 
@@ -141,16 +216,43 @@ table {
             align-self: center;
             
         }
-
         
-        #next {
-            align-self: center;
+        #submit {
+            margin-bottom: 1rem;
             border: 2px solid skyblue;
             background-color: rgb(223, 242, 251);
             color: rgb(83, 83, 83);
-            height: 25vh;
             width: 70%;
+            height: 8vh;
+            margin-top: 1rem;
+        }
+
+        form {
+            padding: 0.1rem;
+            margin-bottom: 0.5rem;
+            align-self: center;
+            justify-content: center;
+            align-content: center;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            height: 3rem;
+            margin-top: 0.7rem;
+        }
+        input#user {
+            width: 69%;
+            height: 90%;
+        }
+        
+        
+        #next {
             margin-bottom: 1rem;
+            border: 2px solid skyblue;
+            background-color: rgb(223, 242, 251);
+            color: rgb(83, 83, 83);
+            width: 70%;
+            height: 8vh;
+            margin-top: 1rem;
         }
         
         button:hover {
