@@ -27,10 +27,15 @@ table, td, tr, th {
 
 @media (min-width: 1280px) { /* desktop styling */
     @media (pointer:fine) {
+        * { 
+            
+        }
         body {
             background-color: pink;
+            background-image: url("/assets/imgs/catbg.png");
             margin: 0 !important;
             padding: 0 !important;
+
         }
         .squareImg > img { 
             width: 47vh;
@@ -59,12 +64,35 @@ table, td, tr, th {
             transition: 500ms;
         }
 
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            background-color: rgb(172, 119, 128);
+            margin-bottom: 1rem;
+        }
+
+        .header > .nav {
+            text-decoration: none;
+            color: white;
+            width: 8%;
+            padding: 1rem 1rem;
+            text-align: center;
+            background-color: rgb(172, 119, 128);
+        }
+
+        .nav:hover {
+            background-color: rgb(132, 90, 97);
+        }
+
         section {
             width: 70%;
             height: 100vh;
             margin-left: auto;
             margin-right: auto;
             background-color: rgb(248, 226, 230);
+            border-left: 2px solid rgba(0, 0, 0, 0.372);
+            border-right: 2px solid rgba(0, 0, 0, 0.372);
         }
 
      
