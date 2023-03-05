@@ -194,7 +194,7 @@ I deployed my site, "Cool Cat Quizzes" on Github Pages. The process was as follo
 - Under Branch, I selected 'Main' and then hit save.
 - I went off and retrieved a snack, came back and refreshed the page, and now had a link to my live website.
 
-The live website can be found here: https://jakob-bren.github.io/my-full-template/index.html 
+The live website can be found here: https://jakob-bren.github.io/pp2-coolcats/index.html 
 
 ## How to Fork
 1. Login/signup to [GitHub](https://github.com/).
