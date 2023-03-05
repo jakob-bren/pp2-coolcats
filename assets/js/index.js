@@ -8,13 +8,8 @@ function fromStorage() { //function for retrieving data from localStorage
     td1.innerText = savedUser;
     td2.innerText = savedScore;
 }
- 
- if (localStorage.usrName) {  //if a username exists in localStorage, load it to the scoreboard.
+
+if (localStorage.usrName) { //if a username exists in localStorage, load it to the scoreboard.
     fromStorage(); 
-}
-
- function sent() { //in lieu of having a database or anywhere meaningful to send the comments form, sent is triggered when the form on feed.html is "submitted".
-    alert("Message sent!");
  }
-
  

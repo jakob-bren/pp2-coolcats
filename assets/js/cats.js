@@ -130,6 +130,8 @@ function verifyAnswer(e) {
    if (e.target.getAttribute("data-type") == aQuestion.answer) { //check data-type number of button clicked against "answer" number stored in array
       ++score;
       scoreText.style.display = "";
+      var navbar = document.getElementById('header');
+      navbar.style.marginBottom = '0rem';
       trackScore.innerText = score;
       let correct = "Correct! Well done.";
       verify.style.backgroundColor = "rgba(0, 156, 0, 35%)";
@@ -168,6 +170,8 @@ function calcResults() // calculate results
    percentage.innerText = calcScore;
    ansDiv.style.display = "none";
    qImg.style.display = "none";
+   scoreText.style.display = "none";
+   document.getElementById('header').style.marginBottom = "1rem";
    qText.innerHTML = "Results";
 
    if (results <=3) { //depending on score achieved, give different "results" image and text

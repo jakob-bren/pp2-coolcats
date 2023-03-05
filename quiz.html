@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/index.css">
-	<title>CCQuizzesLTD</title>
+	<link rel="icon" type="image/x-icon" href="assets/imgs/favicon.ico">
+	<title>Cat Quiz</title>
 </head>
 <body>
 	<section>
-		<nav class="header">
+		<nav id="header">
 			<a class="nav" href="index.html">Home</a>
 			<a class="nav" id="current" href="quiz.html">Quiz</a>
 			<a class="nav" href="feed.html">Feedback</a>
@@ -28,7 +29,7 @@
 
 			<div class="center">
 				<img id="qImage" src="assets/imgs/evie1.webp" alt="Question Image">
-				<img id="resultsCat" src="404image" alt="Results Gif">
+				<img id="resultsCat" src="/assets/imgs/prof.webp" alt="Results Gif">
 			</div>
 			<div class="answers">
 				<div id="answerList">
@@ -42,7 +43,7 @@
 		<div id="scoreValues">
 			<div class="resultsGeneric">
 				<p>You scored: <span id="rawvalue"></span>/8. In percentage points this is <span id="percent"></span>%.</p>
-				<p>in our opinion, <span id="resultsText"></span>.</p> <br> 
+				<p>In our opinion, <span id="resultsText"></span>.</p> <br> 
 				<p>Want to save your highscore? Enter your name below and hit Submit.</p><br>
 				<strong>Enter Username:</strong> <form><input type="text" id="user" name="username" maxlength="20"></form> <button id="submit" onclick="submitScore()">Submit</button>
 				<button id="next">Start Quiz</button>
