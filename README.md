@@ -131,7 +131,7 @@ Xiaomi Redmi Note 8 | Works as expected
 Dell Latitude E5470 | Works as expected
 
 
-## Lighthouse
+# Lighthouse
 
 I ran the website through Chrome's Lighthouse.
 
@@ -149,6 +149,20 @@ My accessibility score was impacted on Feedback for the presence of 200KB worth 
 
 ![Lighthouse Issues on Feedback Page](/docs/readme-imgs/quibbles.JPG)
 
+
+# Validator
+
+All validators passed without any issues.
+
+![Validator 1](/docs/readme-imgs/htmlw3c.JPG)
+
+![Validator 2](/docs/readme-imgs/htmlw3c1.JPG)
+
+![Validator 3](/docs/readme-imgs/htmlw3c2.JPG)
+
+![Validator 4](/docs/readme-imgs/w3c.JPG)
+
+![Validator 5](/docs/readme-imgs/jshint.JPG)
 
 
 # Bugs
