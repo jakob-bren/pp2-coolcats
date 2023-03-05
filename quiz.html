@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,24 +9,26 @@
 <body>
 	<section>
 		<nav class="header">
-				<a class="nav" href="index.html">Home</a>
-				<a class="nav" id="current" href="quiz.html">Quiz</a>
-				<a class="nav" href="feed.html">Feedback</a>
+			<a class="nav" href="index.html">Home</a>
+			<a class="nav" id="current" href="quiz.html">Quiz</a>
+			<a class="nav" href="feed.html">Feedback</a>
 		</nav> 
-
-		<h1 id="hideable">Cool Cat Quizzes</h1>
-		
+		<h3 id="scoreTrack">Progress: <span id="scoreTracker"></span>/8 correct</h3>
+		<div id="top">
+			<h1 id="hideable">Cool Cat Quizzes</h1>
+			
+		</div>
 		<div id="verifyDiv">
 			<button id="verify"></button>
 		</div>
 		<div id="quizmain">
 			<div id="qDiv">
-			<h3 id="question">Loading next...</h3>
-			
+				<h3 id="question">Loading next...</h3>
 			</div>
+
 			<div class="center">
-			<img id="qImage">
-			<img id="resultsCat">
+				<img id="qImage" src="assets/imgs/evie1.webp" alt="Question Image">
+				<img id="resultsCat" src="404image" alt="Results Gif">
 			</div>
 			<div class="answers">
 				<div id="answerList">
@@ -36,47 +38,40 @@
 					<button class="answerFields" data-type="d"></button>
 				</div>
 			</div>
-
-			
 		</div>
 		<div id="scoreValues">
-			
 			<div class="resultsGeneric">
 				<p>You scored: <span id="rawvalue"></span>/8. In percentage points this is <span id="percent"></span>%.</p>
 				<p>in our opinion, <span id="resultsText"></span>.</p> <br> 
 				<p>Want to save your highscore? Enter your name below and hit Submit.</p><br>
-				<strong>Enter Username:</strong> <form><input type="text" id="user" name="username" maxlength="20" pattern="[A-Za-z0-9 .!?-]+$" ></form> <button id="submit" onclick="submitScore()">Submit</button>
+				<strong>Enter Username:</strong> <form><input type="text" id="user" name="username" maxlength="20"></form> <button id="submit" onclick="submitScore()">Submit</button>
 				<button id="next">Start Quiz</button>
 			</div>
 		</div>
-
-		
-
-		<table id="highscores">
-			<tr>
-				<th>Username</th>
-				<th>Score</th>
-			</tr>
-			<tr>
-				<td>Dodger</td>
-				<td>8</td>
-				
-			</tr>
-			<tr>
-				<td>Raffo</td>
-				<td>7</td>
-			</tr>
-			<tr>
-				<td>Sarah</td>
-				<td>4</td>
-				
-			</tr>
-			<tr>
-				<td>l33th4x0r2k9</td>
-				<td>0</td>
-			</tr>
-		</table>
-		
+		<div>
+			<table id="highscores">
+				<tr>
+					<th>Username</th>
+					<th>Score</th>
+				</tr>
+				<tr>
+					<td>Dodger</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<td>Raffo</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>Sarah</td>
+					<td>4</td>	
+				</tr>
+				<tr>
+					<td>l33th4x0r2k9</td>
+					<td>0</td>
+				</tr>
+			</table>
+		</div>
 	</section>
 	<footer>
 		<p>Cat Quizzes 2022</p>
@@ -84,23 +79,3 @@
     <script src="assets/js/cats.js" defer></script>
 </body>
 </html>
-
-<!--What type of cat should I get?
-
-texture= hairless, shorthair, longhair // OR hairyness (0-10)
-cuteness= sliding scale, 1-10
-pattern= stripes, dots, patternless, neutral/no preference
-
-breed= mainecoon, munchkin, tuxedo, tabby, sphynx, siamese
-colour= bw, white, black, brown, silver, red, cream, coffee
-
-questions e.g "do you enjoy vacuuming" "would you have to hide your cat from your landlord" "which of the three patterns appeals to you most" 
-"which cat is most appealing to you/what does your house look like" "adopt or be adopted" "are cats commodities?" "do you like divas?"
-result = if shorthair=7 && cuteness=10 && patterns=neutral && landlord=yes && adoptee && not-commod >> 
-(munchkin attr: cuteness=10, landlord=yes)
-(munchkin type: shorthair=yes patterns=neutral wild=yes independent=yes) 
-results text: you should get a '$colour' '$breed'! '$breed' cats are '$cuteness' and '$independent' creatures. they are '$breedsize' and '$hideability'. your particular '$breed' will be a'$pattern' with '$texture/$hairyness'. your cat will 'come from a shelter/come from a petshop/show up in your back garden and adopt you/be your personal little rescue'. your new cat is '$wild'.
-e.g: you should get a cream and white munchkin! munchkin cats are sweet and self-reliant creatures. they are small and easy to hide. your particular munchkin will be a two-tone cat with short hair. your cat will show up in your back garden and adopt you. your new cat is an escaped housecat.    -->
-
-
-<!-- maybe the above is too complex - build instead a general cat knowledge quiz with basic scoring first. -->
