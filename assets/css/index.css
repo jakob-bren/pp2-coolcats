@@ -13,12 +13,12 @@ body {
 }
 
 .start {
-    background-image: url(/assets/imgs/catbg25.png);
+    background-image: url("assets/imgs/catbg25.png");
 }
 
 #current {
     border-bottom: 1px solid orange;
-    background-image: url(/assets/imgs/catbg25.png);
+    background-image: url("assets/imgs/catbg25.png");
 }
 
 table, td, tr, th {
@@ -78,7 +78,7 @@ tr, td {
         }
 
         body {
-            background-image: url("/assets/imgs/catbg.png");
+            background-image: url("assets/imgs/catbg.png");
         }
     }
 
@@ -437,7 +437,7 @@ tr, td {
             text-align: center;
             border: 2px solid #ff7bf4;
             background-color: rgb(255 255 255);
-            background-image: url("/assets/imgs/catbg25.png");
+            background-image: url("assets/imgs/catbg25.png");
             color: rgb(83, 83, 83);
             box-shadow: 5px 6px 2px -4px #3c3c3c;
         }
@@ -544,7 +544,7 @@ tr, td {
             margin-top: 1rem;
             width: 8rem;
             height: 3rem;
-            background-image: url(/assets/imgs/catbg25.png);
+            background-image: url("assets/imgs/catbg25.png");
             border: 2px solid rgb(214, 126, 140);
         }
 
