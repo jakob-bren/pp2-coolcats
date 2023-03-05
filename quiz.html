@@ -10,22 +10,24 @@
 	<section>
 		<nav class="header">
 				<a class="nav" href="index.html">Home</a>
-				<a class="nav" href="quiz.html">Quiz</a>
+				<a class="nav" id="current" href="quiz.html">Quiz</a>
 				<a class="nav" href="feed.html">Feedback</a>
 		</nav> 
 
-		<h1>Cool Cat Quizzes</h1>
+		<h1 id="hideable">Cool Cat Quizzes</h1>
 		
 		<div id="verifyDiv">
 			<button id="verify"></button>
 		</div>
 		<div id="quizmain">
 			<div id="qDiv">
-			<h3 id="question"></h3>
+			<h3 id="question">Loading next...</h3>
 			
 			</div>
+			<div class="center">
 			<img id="qImage">
-			
+			<img id="resultsCat">
+			</div>
 			<div class="answers">
 				<div id="answerList">
 					<button class="answerFields" data-type="a"></button>
@@ -38,13 +40,17 @@
 			
 		</div>
 		<div id="scoreValues">
-			<img id="resultsCat"><br>
-			<p>You scored: <span id="rawvalue"></span>/8. In percentage points this is <span id="percent"></span>%.</p>
-			<p>in our opinion, <span id="resultsText"></span>.</p>
-			<strong>Enter Username:</strong> <form><input type="text" id="user" name="username"></form> <button id="submit" onclick="submitScore()">Submit</button>
+			
+			<div class="resultsGeneric">
+				<p>You scored: <span id="rawvalue"></span>/8. In percentage points this is <span id="percent"></span>%.</p>
+				<p>in our opinion, <span id="resultsText"></span>.</p> <br> 
+				<p>Want to save your highscore? Enter your name below and hit Submit.</p><br>
+				<strong>Enter Username:</strong> <form><input type="text" id="user" name="username" maxlength="20" pattern="[A-Za-z0-9 .!?-]+$" ></form> <button id="submit" onclick="submitScore()">Submit</button>
+				<button id="next">Start Quiz</button>
+			</div>
 		</div>
 
-		<button id="next">Start Quiz</button>
+		
 
 		<table id="highscores">
 			<tr>
@@ -72,6 +78,9 @@
 		</table>
 		
 	</section>
+	<footer>
+		<p>Cat Quizzes 2022</p>
+	</footer>
     <script src="assets/js/cats.js" defer></script>
 </body>
 </html>

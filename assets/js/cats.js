@@ -78,13 +78,14 @@ function fromStorage() {
    console.log("test");
    console.log(sessionStorage.scoreValue);
    console.log("test1");
-      let row = table.insertRow();
-      let td1 = row.insertCell(0);
-      let td2 = row.insertCell(1);
-      td1.innerText = savedUser;
-      td2.innerText = savedScore;
-}
-fromStorage();
+   let row = table.insertRow();
+   let td1 = row.insertCell(0);
+   let td2 = row.insertCell(1);
+   td1.innerText = savedUser;
+   td2.innerText = savedScore;
+   }
+
+if (sessionStorage.usrName) { fromStorage(); }
 
 function hideButtons() {
    for(let i = 0; i < answersList.length; i++ ) {
@@ -103,8 +104,6 @@ window.onload = function() {
 
 function showNext() {
    var aQuestion = questions[quizProgress];
-   let br = document.createElement("br");
-   console.log(questions.length);
    qText.innerText = ("Question " + (quizProgress+1) + "/8: " + aQuestion.question);
    qImg.src = aQuestion.image;
    for(let i = 0; i < answersList.length; i++ ) {
@@ -115,7 +114,7 @@ function showNext() {
       if (quizProgress === 8) {
          calcResults();
          hideButtons();
-         qText.style.display = 'none';
+         
       }
       else { 
          listenAnswer(); 
@@ -146,28 +145,28 @@ function verifyAnswer(e) {
       ++score;
       console.log("score is:" );
       console.log(score);
-      let correct = "Correct! Well done."
+      let correct = "Correct! Well done.";
       verify.style.backgroundColor = "rgba(0, 156, 0, 35%)";
       verify.style.animation = "fadeIn 0.3s";
       verify.style.display = "";
       verify.innerText = correct;
-      delay;
+      delay();
    }
    else if (e.target.getAttribute("data-type") != aQuestion.answer) {
-      console.log("incorrect! you picked:")
+      console.log("incorrect! you picked:");
       console.log(e.target.getAttribute("data-type"));
       console.log("but the answer is:");
       console.log(aQuestion.answer);
       console.log("score is:" );
       console.log(score);
-      let incorrect = "100% wrong, sorry!"
+      let incorrect = "100% wrong, sorry!";
       verify.style.backgroundColor = "rgba(208, 0, 0, 35%)";
       verify.style.animation = "fadeIn 0.3s";
       verify.style.display = "";
       verify.innerText = incorrect;
-      delay;
-   };
-   qText.innerHTML = "";
+      delay();
+   }
+   qText.innerHTML = "Loading next...";
    answersList.textContent = "";
    answersList.setAttribute = "";
    console.log("old question was:");
@@ -199,29 +198,46 @@ function calcResults()
   rawValue.innerText = results;
   percentage.innerText = calcScore;
   ansDiv.style.display = "none";
-  if (results <=3) {showResultText.innerText = pass; catResultImg.src ="assets/imgs/angry.gif"; btn.style.display = ''; btn.innerText = "Restart Quiz"; };
-  if (results >=4) {showResultText.innerText = distinction; catResultImg.src ="assets/imgs/fall.gif"; btn.style.display = ''; btn.innerText = "Restart Quiz"; };
-  if (results >=7) {showResultText.innerText = merit; catResultImg.src ="assets/imgs/smile.gif"; btn.style.display = ''; btn.innerText = "Restart Quiz"; };
+  qText.innerHTML = "Results";
+  if (results <=3) {showResultText.innerText = pass; catResultImg.src ="assets/imgs/angry.gif"; btn.style.display = ''; btn.innerText = "Restart Quiz"; }
+  if (results >=4) {showResultText.innerText = distinction; catResultImg.src ="assets/imgs/fall.gif"; btn.style.display = ''; btn.innerText = "Restart Quiz"; }
+  if (results >=7) {showResultText.innerText = merit; catResultImg.src ="assets/imgs/smile.gif"; btn.style.display = ''; btn.innerText = "Restart Quiz"; }
   btn.onclick = function() {
    location.reload();
    btn.innerText = "Start Quiz";
-   btn.style.display = "none"; }
+   btn.style.display = "none"; };
   // html correspond = <p>Congrats! You got <span id="rawvalue"></span> out of 8. In other words, you scored <span id=percent></span>. </p>
 }
 
 
 function submitScore() {
-   alert("Score added! Scroll to see the all-time highscores.");
-   table.style.display = "";
-   var usr = document.getElementById('user').value;
+   
+   let usr = document.getElementById('user').value;
    var rawValue = score;
    console.log(rawValue);
    console.log (usr);
-   let row = table.insertRow();
-   let td1 = row.insertCell(0);
-   let td2 = row.insertCell(1);
-   td1.innerText =  usr;
-   td2.innerText = rawValue;
-   sessionStorage.usrName = usr;
-   sessionStorage.scoreValue = rawValue;
+   var specialChars = /[^A-Za-z0-9 .!?-]/g;
+   if (usr.match(specialChars)) {
+       alert ("No special characters apart from '!', '?', '.', or '-' please.");
+       document.getElementById('user').focus();
+       return;
+   }
+   else if (!usr) {
+      alert ("Input cannot be blank.");
+      document.getElementById('user').focus();
+      return;
+   }
+   
+   else if (usr) {
+      let row = table.insertRow();
+      let td1 = row.insertCell(0);
+      let td2 = row.insertCell(1);
+      td1.innerText =  usr;
+      td2.innerText = rawValue;
+      sessionStorage.usrName = usr;
+      sessionStorage.scoreValue = rawValue;
+      table.style.display = "";
+      document.getElementById('submit').style.display = "none";
+      alert("Score added! Scroll to see the all-time highscores.");
+   }
 }

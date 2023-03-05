@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/index.css">
+	<title>Feedback</title>
+</head>
+<body id="index">
+	<section>
+		<nav class="header">
+			<a class="nav" href="index.html">Home</a>
+			<a class="nav" href="quiz.html">Quiz</a>
+			<a class="nav" id="current" href="feed.html">Feedback</a>
+	</nav> 
+		<h1 id="hideable">Cool Cat Quizzes</h1>
+		<div id="quizmain">
+			<div id="qDiv">
+			<h3 id="question">Feedback</h3>
+			
+			</div>
+			<div class="squareImg">
+				<img src="/assets/imgs/519583-Cat-Phone-Sleep.webp">
+			</div>
+			<div class="intro">
+                <br>
+				<p>Do you have any suggestions for quizzes you'd like to see,</p>
+				<p>questions you'd like added, answers you'd like amended etc,</p>
+				<p>or simply just want to get in touch or complain to us?</p>
+                <p>Just  fill out the below form!</p>
+                <div id="contactform">
+                    <form id="contact" onsubmit="sent()">
+                        <p><strong>Contact Us</strong></p>
+                        <input type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z0-9].{2,}" required><br>
+                        <input type="text" id="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+                        <textarea name="comment" id="comment" form="comments" placeholder="Enter text here.." required></textarea><br>
+                        <input type="checkbox" name="perm" required>I am over 18 or have parental permission<br> 
+                        <input type="submit" value="Send">
+                        
+                    </form>
+                    </form>
+                </div>
+
+			</div>
+			
+	</section>
+	<footer>
+		<p>Cat Quizzes 2022</p>
+	</footer>
+    <script src="assets/js/index.js" defer></script>
+</body>
+</html>

@@ -12,33 +12,179 @@ body {
     height: 90vh;
 }
 
+#current {
+    border-bottom: 1px solid orange;
+    background-image: url(/assets/imgs/catbg25.png);
+}
+
+
 table, td, tr, th {
     border-collapse: collapse;
     align-self: center;
-    border: 1px solid black;
-    padding: 0.25rem;
-    margin-bottom: 2rem;
 }
+
+
+th {
+    width: 100%;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    background-color: palevioletred;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+tr, td { 
+    background-color: rgb(218, 134, 162);
+    color: white;
+}
+  
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
 
-@media (min-width: 1280px) { /* desktop styling */
-    @media (pointer:fine) {
+
+@media (pointer:fine) {
+    @media (max-width: 1023px) {
+        
+            section {
+                width: 100%;
+            }
+
+          
+
+            footer {
+                width: 100%;
+                align-items: flex-end;
+            }  
+      }
+
+        @media (min-width: 1024px) { /* desktop styling */
+        
+                footer {                     
+                    width: 70%;
+                }
+
+                section {
+                    width: 70%;
+                }
+
+                body {
+                    background-image: url("/assets/imgs/catbg.png");
+                }
+            }
+
+
         * { 
             
         }
+
+        #contactform {
+            border-radius: 5px;
+            background-color: #ff8fdf42;
+            padding: 1.2rem;
+            width: 60%;
+            max-height: 32rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+
+        #contact {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 90%;
+        }
+
+        #contact input[type=submit] {
+            width: 4rem;
+            height: 1.5rem;
+            border: 2px solid rgb(214, 126, 140);
+            background-color: white;
+        }
+
+        #contact input[type=submit]:hover {
+            background-color: rgb(230, 230, 230);
+            transition: 0.3s;
+        } 
+
+        #contactform p, #contactform input[type=checkbox] {
+            margin-bottom: 0.7rem;
+        }
+
+        #contactform input[type=checkbox] {
+            margin-right: 0.25rem;
+        }
+
+        #contact input[type=text], textarea {
+            padding: 0.25rem;
+            width: 100%;
+            margin-bottom: 0.7rem;
+            box-sizing: border-box;
+            text-align: left;
+            border: 1px solid white;
+        }
+
+        #contact input[type=text]:hover, textarea:hover, input[type=checkbox]:hover {
+            background-color: rgb(247, 247, 247);
+            border: 1px solid rgb(180, 180, 180);
+            transition: 0.3s;
+        }
+
+        #contact textarea {
+            min-height: 4rem;
+            max-height: 12rem;
+            resize: vertical;
+        }
+
         body {
-            background-color: pink;
-            background-image: url("/assets/imgs/catbg.png");
+            background-color: pink;  
             margin: 0 !important;
             padding: 0 !important;
-
         }
+
+        section { 
+            padding-bottom: 2rem;
+            min-height: 100vh;
+            max-height: 160vh;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(248, 226, 230);
+            border-left: 2px solid rgba(0, 0, 0, 0.372);
+            border-right: 2px solid rgba(0, 0, 0, 0.372);
+        }
+
+        footer { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(172, 119, 128);
+            height: 3rem;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1250;
+            position: inherit;
+            border-left: 2px solid rgba(0, 0, 0, 0.372);
+            border-right: 2px solid rgba(0, 0, 0, 0.372);
+        }
+
         .squareImg > img { 
-            width: 47vh;
+            width: 100%;
+            height: 32rem;
+            object-fit: cover;
         }
         button {
             font-size: 1.15rem;
@@ -50,17 +196,16 @@ table, td, tr, th {
             padding-right: 1rem;
             line-height: 1rem;
             text-align: center;
-            border: 2px solid skyblue;
-            background-color: rgb(223, 242, 251);
+            border: 2px solid #d42aff;
+            background-color: rgb(255 255 255);
             color: rgb(83, 83, 83);
             box-shadow: 5px 6px 2px -4px #3c3c3c;
-            
         }
 
         button:hover {
-            background-color: rgb(133, 207, 241);
+            background-color: rgb(241 133 206);
             cursor: pointer;
-            color: black;
+            color: white;
             transition: 500ms;
         }
 
@@ -81,27 +226,23 @@ table, td, tr, th {
             background-color: rgb(172, 119, 128);
         }
 
+
         .nav:hover {
             background-color: rgb(132, 90, 97);
         }
 
-        section {
-            width: 70%;
-            height: 100vh;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: rgb(248, 226, 230);
-            border-left: 2px solid rgba(0, 0, 0, 0.372);
-            border-right: 2px solid rgba(0, 0, 0, 0.372);
-        }
+       
 
-     
+        #question {
+            position: absolute;
+            margin-bottom: 1.5rem;
+        }
 
         #verify {
             height: 3rem;
             position: absolute;
             margin-bottom: 3.5rem;
-            margin-top: 40rem;
+            margin-top: 35rem;
             color: white;
             width: 100%;
         }
@@ -133,20 +274,24 @@ table, td, tr, th {
             max-height: 45vh;
         }
         
-     
-        
-        th {
-            width: 100%;
-        }
-        
-        table {
-            max-width: 25vh;
-            margin-left: auto;
-            margin-right: auto;
+        table, td, tr, th {
+            border: 1px solid black;
+            padding: 0.25rem;
         }
 
+        table { 
+            max-width: 45vh;
+        }
+        
+        .resultsGeneric input#user {
+            width: 12rem;
+            height: 1.30rem;
+            margin-top: 0.35rem;
+        }
+       
+
     }
-}
+
 
 @media only screen and (max-width: 1080px) { /* for mobile screens */
     @media (pointer:coarse) {
@@ -154,24 +299,100 @@ table, td, tr, th {
          font-size: 1.15rem;
         }
 
-        table {
-            margin-top: 0.5rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        }
-
         html {
             box-sizing: border-box
         }
-        .squareImg > img { 
-            width: 55%;
-            margin-left: 1rem;
-            margin-right: 1rem;
+
+        body {
+            background-color: rgb(248, 226, 230)
         }
 
+        section {
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            background-color: rgb(172, 119, 128);
+            margin-bottom: 1rem;
+            
+        }
+
+        .header > .nav {
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: white;
+            width: 33%;
+            padding: 0.75rem 2rem;
+            text-align: center;
+            background-color: rgb(172, 119, 128);
+        }
+
+        footer { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(172, 119, 128);
+            width: 100%;
+            height: 3rem;
+            color: white;
+        }
+
+      
+
+        #question, .resultsGeneric {
+            margin-bottom: 0.0rem;
+            color: white;
+            text-shadow: 1px 1px rgb(188, 188, 188);
+            background-color: rgb(208, 144, 155);
+            padding: 0.1rem;
+        }
+
+        .resultsGeneric > p {
+            padding-left: 0.6rem;
+            padding-right: 0.6rem;
+        }
+        
+        #hideable {
+            display: none;
+        }
+
+       
+        .squareImg > img { 
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+        }
+
+        .intro {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            color: rgb(62, 62, 62);
+        }
+
+        .intro > button {
+            text-align: center;
+            border: 2px solid #ff7bf4;
+            background-color: rgb(255 255 255);
+            width: 50%;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            color: rgb(83, 83, 83);
+            box-shadow: 5px 6px 2px -4px #3c3c3c;
+        }
+
+
+        .center {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.25rem;
+        }
         #qImage, #resultsCat {
-            max-width: 42.5vh;
+            
             max-height: 42.5vh;
     
         }
@@ -194,7 +415,7 @@ table, td, tr, th {
             align-items: center;
             justify-content: center;
             width: 100%;
-            margin-top: 5rem;
+            margin-top: 11rem;
             
         }
 
@@ -203,20 +424,19 @@ table, td, tr, th {
             justify-self: center;
             background-color: rgba(0, 121, 0, 0.826);
             color: white;
-            border: 3px solid rgb(34, 240, 255);
+            border: 3px solid rgb(255 255 255);
             text-align: center;
             height: 10vh;
-            width: 90%;
+            width: 92.4%;
             margin-top: 0rem;
-            margin-bottom: 50rem;
-            
         }
     
-        #answerList > button {
+        #answerList > button, #next, #submit {
             flex: 2 0 50%;
             text-align: center;
-            border: 2px solid skyblue;
-            background-color: rgb(223, 242, 251);
+            border: 2px solid #ff7bf4;
+            background-color: rgb(255 255 255);
+            background-image: url("/assets/imgs/catbg25.png");
             color: rgb(83, 83, 83);
             box-shadow: 5px 6px 2px -4px #3c3c3c;
     
@@ -225,6 +445,7 @@ table, td, tr, th {
 
         .answerFields {
             font-size: 1.25rem;
+            font-weight: 600;
             min-width: 2rem;
             height: 20vh;
             width: 20vh;
@@ -241,13 +462,13 @@ table, td, tr, th {
             border: 2px solid skyblue;
             background-color: rgb(223, 242, 251);
             color: rgb(83, 83, 83);
+            text-shadow: 1px 2px rgb(224, 224, 224);
             align-self: center;
             
         }
         
         #submit {
             margin-bottom: 1rem;
-            border: 2px solid skyblue;
             background-color: rgb(223, 242, 251);
             color: rgb(83, 83, 83);
             width: 70%;
@@ -255,7 +476,7 @@ table, td, tr, th {
             margin-top: 1rem;
         }
 
-        form {
+        .resultsGeneric form {
             padding: 0.1rem;
             margin-bottom: 0.5rem;
             align-self: center;
@@ -267,15 +488,27 @@ table, td, tr, th {
             height: 3rem;
             margin-top: 0.7rem;
         }
-        input#user {
+        .resultsGeneric input#user {
             width: 69%;
             height: 90%;
+        }
+
+        table, td, tr, th {
+            padding: 0.35rem;
+            padding-right: 1.75rem;
+        }
+
+        table {
+            margin-top: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1rem;
+            width: 100%;
         }
         
         
         #next {
             margin-bottom: 1rem;
-            border: 2px solid skyblue;
             background-color: rgb(223, 242, 251);
             color: rgb(83, 83, 83);
             width: 70%;
@@ -288,6 +521,62 @@ table, td, tr, th {
             cursor: pointer;
             color: black;
             transition: 500ms;
+        }
+        #contactform {
+            border-radius: 5px;
+            background-color: #ffd3e5;
+            padding: 1.2rem;
+            width: 85%;
+            min-height: 16rem;
+            height: 20rem;
+            flex-wrap: wrap;
+            align-items: left;
+            justify-content: left;
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+          }
+
+          #contact {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+        }
+
+        #contact input[type=submit] {
+            margin-top: 1rem;
+            width: 8rem;
+            height: 3rem;
+            background-image: url(/assets/imgs/catbg25.png);
+            border: 2px solid rgb(214, 126, 140);
+        }
+
+        #contactform p, #contactform input[type=checkbox] {
+            margin-bottom: 0.7rem;
+        }
+
+        #contactform input[type=checkbox] {
+            margin-right: 0.25rem;
+            font-size: 1.2rem;
+            width: 1rem;
+            height: 1rem;
+    
+        }
+
+        #contact input[type=text], textarea {
+            padding: 0.25rem;
+            padding-left: 0.5rem;
+            width: 100%;
+            margin-bottom: 0.7rem;
+            box-sizing: border-box;
+            text-align: left;
+            border: 1px solid white;
+        }
+
+        #contact textarea {
+            min-height: 4rem;
+            max-height: 12rem;
+            resize: vertical;
         }
     }
 }

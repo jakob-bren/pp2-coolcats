@@ -8,18 +8,23 @@
 </head>
 <body id="index">
 	<section>
-		<br><br>
-		<h1>Cool Cat Quizzes</h1>
+		<nav class="header">
+			<a class="nav" id="current" href="index.html">Home</a>
+			<a class="nav" href="quiz.html">Quiz</a>
+			<a class="nav" href="feed.html">Feedback</a>
+	</nav> 
+		<h1 id="hideable">Cool Cat Quizzes</h1>
 		<div id="quizmain">
 			<div id="qDiv">
 			<h3 id="question">Welcome to our Website</h3>
 			
 			</div>
 			<div class="squareImg">
-				<img src="assets/imgs/evie1.webp">
+				<img src="/assets/imgs/evielynn.webp">
 			</div>
-			<div class="">
-				<p>How well do you know cats? Are you brave enough to put your knowledge to the test? </p>
+			<div class="intro">
+				<p>Welcome to Cool Cat Quizzes - your hub for all things quizzical and cat!</p>
+				<p>How well do you know your cats? Are you brave enough to put your knowledge to the test? </p>
 				<p> Proceed if you dare!</p>
 				<button onclick = "window.location.href='/quiz.html';">Start Quiz</button>
 			</div>
@@ -50,6 +55,9 @@
 		</div>
 		
 	</section>
-    <script src="assets/js/cats.js" defer></script>
+	<footer>
+		<p>Cat Quizzes 2022</p>
+	</footer>
+    <script src="assets/js/index.js" defer></script>
 </body>
 </html>
