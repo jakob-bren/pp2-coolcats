@@ -1,9 +1,10 @@
-const questions = [ //array to store the questions
+//array to store the questions. Correct answers are designated by a 0-3 num range stored in "answer:".
+const questions = [ 
     { 
       image: 'assets/imgs/evie1.webp',
       question: "How cute is your cat?",
       answers: ["Very", "Incredibly", "A bit", "Not cute"],
-      answer: 1 // counting of course starts from zero here in this type of logic, so "1" correlates to "incredibly" here
+      answer: 1 // "incredibly"
     },
     {
       image: 'assets/imgs/mrman.webp',
@@ -55,7 +56,7 @@ const questions = [ //array to store the questions
     }
  ];
 
-let trackScore = document.getElementById('scoreTracker'); //declare everything important
+let trackScore = document.getElementById('scoreTracker'); //declare all the important things
 let catResultImg = document.getElementById('resultsCat');
 let scoreText = document.getElementById('scoreTrack');
 let table = document.getElementById('highscores');
@@ -75,10 +76,6 @@ catResultImg.style.display = "none"; //hide elements that come into play later
 function fromStorage() { //function for retrieving data from localStorage
    var savedUser = localStorage.usrName;
    var savedScore = localStorage.scoreValue;
-   console.log(localStorage.usrName);
-   console.log("test");
-   console.log(localStorage.scoreValue);
-   console.log("test1");
    let row = table.insertRow();
    let td1 = row.insertCell(0);
    let td2 = row.insertCell(1);
@@ -95,7 +92,7 @@ window.onload = function() { //quiz automatically starts when quiz.html has load
    btn.style.display = 'none';
 };
 
-function showNext() {
+function showNext() { //loads question text and answer text for as many questions as are present in the array & as much answer text is present
    var aQuestion = questions[quizProgress];
    qText.innerText = ("Question " + (quizProgress+1) + "/8: " + aQuestion.question); //array counts from 0 to 7, we want to count from 1 to 8
    qImg.src = aQuestion.image; // set the src of the img with ID qIMG as the relevant entry in the array
@@ -119,8 +116,8 @@ function listenAnswer() { //listen out for which button was clicked
    }
 }
 
-function verifyAnswer(e) {
-   const delay = setTimeout(next, 450); //wait 400ms before progressing and activating the function "next()"
+function verifyAnswer(e) { //verify whether or not user input matches correct answer according to array
+   const delay = setTimeout(next, 450); //wait 450ms before progressing and activating the function "next()"
    function next() {
       verify.style.display = "none"; //hide correct/incorrect popup
       ++quizProgress; //progress to the next question in the array
@@ -207,8 +204,6 @@ function calcResults() // calculate results
 function submitScore() { //this is not unused, it is simply called by a html button instead of being triggered directly in the script
    let usr = document.getElementById('user').value;
    var rawValue = score;
-   console.log(rawValue);
-   console.log (usr);
    var specialChars = /[^A-Za-z0-9 .!?-]/g; //regex to detect anything other ("^") than A-z in lower or uppercase, 0-9 in decimals, or "!" "?" "." or "-" which are harmless elements which oft form part of human names and usernames
 
    if (usr.match(specialChars)) {

@@ -1,3 +1,4 @@
-function sent() { //in lieu of having a database or anywhere meaningful to send the comments form, sent is triggered when the form on feed.html is "submitted".
+//triggered when the form on feed.html is submitted to make it look like we have a database or a mailer
+function sent() { 
     alert("Message sent!");
  }
