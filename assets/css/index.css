@@ -172,7 +172,7 @@ tr, td {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgb(172, 119, 128);
+        background-color: #6F444A;
         height: 3rem;
         color: white;
         margin-left: auto;
@@ -334,7 +334,7 @@ tr, td {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgb(172, 119, 128);
+            background-color: #6F444A;
             width: 100%;
             height: 3rem;
             color: white;
