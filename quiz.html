@@ -9,30 +9,30 @@
 </head>
 <body>
 	<section>
-		<nav id="header">
+		<nav id="header"> <!--navigation bar-->
 			<a class="nav" href="index.html">Home</a>
 			<a class="nav" id="current" href="quiz.html">Quiz</a>
 			<a class="nav" href="feed.html">Feedback</a>
 		</nav> 
-		<h3 id="scoreTrack">Progress: <span id="scoreTracker"></span>/8 correct</h3>
+		<h3 id="scoreTrack">Progress: <span id="scoreTracker"></span>/8 correct</h3> <!--shows progress in terms of correct/incorrect answers-->
 		<div id="top">
 			<h1 id="hideable">Cool Cat Quizzes</h1>
 			
 		</div>
-		<div id="verifyDiv">
+		<div id="verifyDiv"> <!--displays the "Correct/Incorrect" message whenever a quiz answer is clicked-->
 			<button id="verify"></button>
 		</div>
 		<div id="quizmain">
 			<div id="qDiv">
-				<h3 id="question">Loading next...</h3>
+				<h3 id="question">Loading next...</h3> <!--dummy text while the next question is being loaded in-->
 			</div>
 
 			<div class="center">
-				<img id="qImage" src="assets/imgs/evie1.webp" alt="Question Image">
-				<img id="resultsCat" src="assets/imgs/prof.webp" alt="Results Gif">
+				<img id="qImage" src="assets/imgs/evie1.webp" alt="Question Image"> <!--holds the image corresponding to current question-->
+				<img id="resultsCat" src="assets/imgs/prof.webp" alt="Results Gif"> <!--shows the corresponding results gif at end of quiz-->
 			</div>
 			<div class="answers">
-				<div id="answerList">
+				<div id="answerList"> <!--four buttons to hold answer text-->
 					<button class="answerFields" data-type="a"></button>
 					<button class="answerFields" data-type="b"></button>
 					<button class="answerFields" data-type="c"></button>
@@ -41,7 +41,7 @@
 			</div>
 		</div>
 		<div id="scoreValues">
-			<div class="resultsGeneric">
+			<div class="resultsGeneric"> <!--spans are dynamically updated according to score achieved in quiz-->
 				<p>You scored: <span id="rawvalue"></span>/8. In percentage points this is <span id="percent"></span>%.</p>
 				<p>In our opinion, <span id="resultsText"></span>.</p> <br> 
 				<p>Want to save your highscore? Enter your name below and hit Submit.</p><br>
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		<div>
-			<table id="highscores">
+			<table id="highscores"> <!--score achieved is appended after final entry in table as a pseudo-static LocalStorage entry-->
 				<tr>
 					<th>Username</th>
 					<th>Score</th>
@@ -77,6 +77,6 @@
 	<footer>
 		<p>Cat Quizzes 2022</p>
 	</footer>
-    <script src="assets/js/cats.js" defer></script>
+    <script src="assets/js/cats.js" defer></script> <!--defer script loading until page is fully loaded to avoid errors-->
 </body>
 </html>
