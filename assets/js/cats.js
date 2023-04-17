@@ -60,6 +60,7 @@ let trackScore = document.getElementById('scoreTracker'); //declare all the impo
 let catResultImg = document.getElementById('resultsCat');
 let scoreText = document.getElementById('scoreTrack');
 let table = document.getElementById('highscores');
+let title = document.getElementById('hideable');
 let qText = document.getElementById('question');
 let qImg = document.getElementById('qImage');
 let btn = document.getElementById('next');
@@ -146,6 +147,7 @@ function verifyAnswer(e) { //verify whether or not user input matches correct an
       return delay;
    }
    qText.innerHTML = "Loading next..."; //dummy text
+   title.style.display = "none"; //hide title text
    answersList.textContent = "";
    answersList.setAttribute = "";
    table.style.display = "none"; //hide scoreboard after first question
@@ -159,6 +161,7 @@ function calcResults() // calculate results
    var merit = "you're a proper cat genius";
    var showResultText = document.getElementById('resultsText');
    document.getElementById('scoreValues').style.display = '';
+   title.style.display = "";
    var results = parseInt(score);
    var rawValue = document.getElementById('rawvalue');
    var percentage = document.getElementById('percent');
