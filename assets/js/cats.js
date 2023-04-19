@@ -56,7 +56,7 @@ const questions = [
     }
  ];
 
-let trackScore = document.getElementById('scoreTracker'); //declare all the important things
+let trackScore = document.getElementById('scoreTracker'); //declare all the important vars
 let catResultImg = document.getElementById('resultsCat');
 let scoreText = document.getElementById('scoreTrack');
 let table = document.getElementById('highscores');

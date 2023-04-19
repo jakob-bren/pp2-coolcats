@@ -57,7 +57,7 @@ tr, td {
 }
 
 @media (pointer:fine) { /* desktop styling, targeting users with a mouse/trackpad */
-    @media (max-width: 1023px) {
+    @media (max-width: 1023px) { /* smaller screens - main difference is that the background image is hidden on smaller screens/windows */
         section {
             width: 100%;
         }
@@ -68,7 +68,7 @@ tr, td {
         }  
     }
 
-    @media (min-width: 1024px) { 
+    @media (min-width: 1024px) {  /* normal size screens - show BG image */
         footer {                     
             width: 70%;
         }
@@ -288,8 +288,8 @@ tr, td {
     }
 }
 
-@media only screen and (max-width: 1921px) { 
-    @media (pointer:coarse) { /* for mobile screens, targeting users with only "coarse" input i.e a finger on a touchscreen */
+@media only screen and (max-width: 1921px) {
+    @media (pointer:coarse) { /* for mobile/tablet/laptops, targeting users with "coarse" input available i.e a finger on a touchscreen */
         * {
          font-size: 1.15rem;
         }

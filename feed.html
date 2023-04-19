@@ -9,27 +9,27 @@
 </head>
 <body id="index">
 	<section>
-		<nav id="header">
+		<nav id="header"> <!--navigation bar-->
 			<a class="nav" href="index.html">Home</a>
 			<a class="nav" href="quiz.html">Quiz</a>
 			<a class="nav" id="current" href="feed.html">Feedback</a>
-	</nav> 
-		<h1 id="hideable">Cool Cat Quizzes</h1>
-		<div id="quizmain">
+		</nav> 
+		<h1 id="hideable">Cool Cat Quizzes</h1> <!--site title-->
+		<div id="quizmain"> 
 			<div id="qDiv">
-			<h3 id="question">Feedback</h3>
+			<h3 id="question">Feedback</h3> <!--page title-->
 			</div>
-			<div class="squareImg">
-				<img src="assets/imgs/519583-Cat-Phone-Sleep.webp" alt="A cat sleeping on a traditional style phone receiver.">
+			<div class="squareImg"> <!--hero image-->
+				<img src="assets/imgs/519583-Cat-Phone-Sleep.webp" alt="A cat sleeping beside a traditional style phone receiver.">
 			</div>
-			<div class="intro">
-                <br>
+			<div class="intro"> <!--main text on page-->
+                <br> <!--contact form-->
 				<p>Do you have any suggestions for quizzes you'd like to see,</p>
 				<p>questions you'd like added, answers you'd like amended etc,</p>
 				<p>or simply just want to get in touch or complain to us?</p>
                 <p>Just  fill out the below form!</p>
-                <div id="contactform">
-                    <form id="contact" onsubmit="sent()">
+                <div id="contactform"> <!--input validation using regex on all important fields-->
+                    <form id="contact" onsubmit="sent()"> <!--runs sent() from feed.js when form is submitted-->
                         <p><strong>Contact Us</strong></p>
                         <input type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z0-9].{2,}" required><br>
                         <input type="text" id="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
@@ -44,6 +44,6 @@
 	<footer>
 		<p>Cat Quizzes 2022</p>
 	</footer>
-    <script src="assets/js/feed.js" defer></script>
+    <script src="assets/js/feed.js" defer></script> <!--defer script loading until page is fully loaded to avoid errors-->
 </body>
 </html>

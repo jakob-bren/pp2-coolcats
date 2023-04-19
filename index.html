@@ -9,11 +9,11 @@
 </head>
 <body id="index">
 	<section>
-		<nav id="header">
+		<nav id="header"> <!--navigation bar-->
 			<a class="nav" id="current" href="index.html">Home</a>
 			<a class="nav" href="quiz.html">Quiz</a>
 			<a class="nav" href="feed.html">Feedback</a>
-	</nav> 
+		</nav> 
 		<h1 id="hideable">Cool Cat Quizzes</h1>
 		<div id="quizmain">
 			<div id="qDiv">
@@ -27,11 +27,12 @@
 				<p>Welcome to Cool Cat Quizzes - your hub for all things quizzical and cat!</p>
 				<p>How well do you know your cats? Are you brave enough to put your knowledge to the test? </p>
 				<p> Proceed if you dare!</p>
-				<button class="start" onclick = "window.location.href='quiz.html';">Start Quiz</button>
+				<button class="start" onclick = "window.location.href='quiz.html';">Start Quiz</button> 
+				<!--above button switches to quiz.html & runs cats.js-->
 			</div>
 		
 			<h3 class="subhead">All Time High-Scores</h3>
-			<table id="highscores">
+			<table id="highscores"> <!--score achieved is appended after final entry in table as a pseudo-static LocalStorage entry-->
 				<tr>
 					<th>Username</th>
 					<th>Score</th>
@@ -61,6 +62,6 @@
 	<footer>
 		<p>Cat Quizzes 2022</p>
 	</footer>
-    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/index.js" defer></script> <!--defer script loading until page is fully loaded to avoid errors-->
 </body>
 </html>
